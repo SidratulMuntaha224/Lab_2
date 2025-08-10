@@ -1,0 +1,23 @@
+// Find the second largest element in the array. Assume at least two unique elements.
+// Sample input: arr = [4, 1, 7, 3, 9] 
+// Sample output: 7
+#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+int main() {
+    vector<int> arr = {4, 1, 7, 3, 9};
+    set<int> uniqueSet(arr.begin(), arr.end());
+
+    if (uniqueSet.size() < 2) {
+        cout << "Not enough unique elements" << endl;
+        return 0;
+    }
+
+    auto it = uniqueSet.rbegin();
+    it++; // Move to second largest
+    cout << *it << endl;
+
+    return 0;
+}
