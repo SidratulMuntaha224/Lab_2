@@ -1,0 +1,16 @@
+// Print all unique elements from the array
+// Sample input: arr = [1, 2, 2, 3, 4, 4, 5]
+// Sample output: 1 2 3 4 5 
+#include <iostream>
+#include <vector>
+#include <set>
+using namespace std;
+
+int main() {
+    vector<int> arr = {1, 2, 2, 3, 4, 4, 5};
+    set<int> uniqueSet(arr.begin(), arr.end());
+
+    for (int num : uniqueSet) cout << num << " ";
+    cout << endl;
+    return 0;
+}
