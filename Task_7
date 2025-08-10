@@ -1,0 +1,19 @@
+// Count the number of times each element appears in the array. Output as a dictionary/map.
+// Sample input: arr = [2, 3, 2, 4, 3, 3] 
+// Sample output: {2: 2, 3: 3, 4: 1}
+
+#include <vector>
+#include <map>
+using namespace std;
+
+int main() {
+    vector<int> arr = {2, 3, 2, 4, 3, 3};
+    map<int, int> freq;
+
+    for (int num : arr) freq[num]++;
+
+    for (auto &p : freq) cout << p.first << ": " << p.second << " ";
+    cout << endl;
+
+    return 0;
+}
