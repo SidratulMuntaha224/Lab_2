@@ -1,0 +1,20 @@
+// Question: Traverse the array and count how many even and odd numbers are present.
+// Sample input: arr = [10, 3, 5, 6, 8, 9]
+// Sample Output: Even: 3, Odd: 3
+// Answer:
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> arr = {10, 3, 5, 6, 8, 9};
+    int evenCount = 0, oddCount = 0;
+
+    for (int num : arr) {
+        if (num % 2 == 0) evenCount++;
+        else oddCount++;
+    }
+
+    cout << "Even: " << evenCount << ", Odd: " << oddCount << endl;
+    return 0;
+}
